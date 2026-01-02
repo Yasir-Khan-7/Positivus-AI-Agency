@@ -3,6 +3,8 @@ import HeroSection from "@/components/HeroSection";
 import CompanyLogos from "@/components/CompanyLogos";
 import ServicesSection from "@/components/ServicesSection";
 import CTASection from "@/components/CTASection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import WorkingProcessSection from "@/components/WorkingProcessSection";
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
       <CompanyLogos />
       <ServicesSection />
       <CTASection />
+      <CaseStudiesSection />
+      <WorkingProcessSection />
     </main>
   );
 }
