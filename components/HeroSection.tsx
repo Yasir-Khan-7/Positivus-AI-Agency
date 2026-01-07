@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="w-full bg-white">
+    <section id="about" className="w-full bg-white scroll-mt-32">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] pb-[40px] sm:pb-[50px] lg:pb-[70px]">
         <div className="flex flex-col lg:flex-row items-center justify-between gap-[40px] sm:gap-[50px] lg:gap-[60px]">
           {/* Left Content */}
