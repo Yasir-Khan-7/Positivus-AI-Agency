@@ -12,8 +12,8 @@ const companies = [
 export default function CompanyLogos() {
   return (
     <section className="w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-[100px] py-[70px]">
-        <div className="flex flex-wrap items-center justify-between gap-x-[78px] gap-y-[40px] grayscale opacity-60">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] py-[40px] sm:py-[55px] lg:py-[70px]">
+        <div className="flex flex-wrap items-center justify-center gap-x-[40px] sm:gap-x-[60px] lg:gap-x-[78px] gap-y-[30px] sm:gap-y-[35px] lg:gap-y-[40px] grayscale opacity-60">
           {companies.map((company) => (
             <div key={company.name} className="flex items-center justify-center">
               <Image 
@@ -21,7 +21,7 @@ export default function CompanyLogos() {
                 alt={`${company.name} logo`}
                 width={company.width}
                 height={company.height}
-                className="h-auto"
+                className="h-auto w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-none"
               />
             </div>
           ))}

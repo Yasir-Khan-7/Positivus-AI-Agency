@@ -61,25 +61,25 @@ export default function TestimonialsSection() {
 
   return (
     <section className="w-full bg-white">
-      <div className="max-w-[1440px] mx-auto px-8 lg:px-[100px] py-[70px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] py-[40px] sm:py-[55px] lg:py-[70px]">
         {/* Section Header */}
-        <div className="flex items-center gap-[40px] mb-[80px]">
-          <div className="inline-block">
-            <h2 className="text-[45px] font-medium leading-[57px] bg-primary px-[7px] rounded-[7px]">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-[20px] sm:gap-[30px] lg:gap-[40px] mb-[40px] sm:mb-[60px] lg:mb-[80px]">
+          <div className="inline-block flex-shrink-0">
+            <h2 className="text-[32px] sm:text-[38px] lg:text-[45px] font-medium leading-[40px] sm:leading-[48px] lg:leading-[57px] bg-primary px-[7px] rounded-[7px] whitespace-nowrap">
               Testimonials
             </h2>
           </div>
-          <p className="text-[18px] font-normal leading-[23px] text-dark max-w-[580px]">
+          <p className="text-[16px] sm:text-[17px] lg:text-[18px] font-normal leading-[20px] sm:leading-[21px] lg:leading-[23px] text-dark max-w-full sm:max-w-[580px]">
             Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
           </p>
         </div>
 
         {/* Testimonials Carousel Container */}
-        <div className="bg-dark rounded-[45px] py-[84px] px-[30px] lg:px-[60px] relative">
+        <div className="bg-dark rounded-[30px] sm:rounded-[38px] lg:rounded-[45px] py-[50px] sm:py-[67px] lg:py-[84px] px-[20px] sm:px-[30px] lg:px-[60px] relative">
           {/* Carousel */}
           <div className="relative">
             {/* Testimonials Track */}
-            <div className="flex items-stretch justify-center gap-[50px] mb-[118px] min-h-[430px]">
+            <div className="flex items-stretch justify-center gap-[30px] sm:gap-[40px] lg:gap-[50px] mb-[80px] sm:mb-[100px] lg:mb-[118px] min-h-[380px] sm:min-h-[405px] lg:min-h-[430px]">
               {/* Previous card */}
               <div className="hidden lg:block w-full lg:w-[350px] flex-shrink-0 opacity-50">
                 <TestimonialCard
@@ -101,7 +101,7 @@ export default function TestimonialsSection() {
             </div>
 
             {/* Navigation Controls */}
-            <div className="flex items-center justify-center gap-[80px] lg:gap-[150px]">
+            <div className="flex items-center justify-center gap-[50px] sm:gap-[100px] lg:gap-[150px]">
               {/* Previous Arrow */}
               <button
                 onClick={handlePrevious}
@@ -114,6 +114,7 @@ export default function TestimonialsSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] lg:w-[24px] lg:h-[24px]"
                 >
                   <path
                     d="M15 18L9 12L15 6"
@@ -126,7 +127,7 @@ export default function TestimonialsSection() {
               </button>
 
               {/* Star Indicators */}
-              <div className="flex items-center gap-[20px]">
+              <div className="flex items-center gap-[15px] sm:gap-[18px] lg:gap-[20px]">
                 {testimonials.map((_, index) => (
                   <button
                     key={index}
@@ -139,7 +140,7 @@ export default function TestimonialsSection() {
                       alt={index === currentIndex ? "Current slide" : "Slide indicator"}
                       width={22}
                       height={22}
-                      className={`w-[22px] h-[22px] ${
+                      className={`w-[18px] h-[18px] sm:w-[20px] sm:h-[20px] lg:w-[22px] lg:h-[22px] ${
                         index === currentIndex ? 'opacity-100' : 'opacity-30'
                       }`}
                     />
@@ -159,6 +160,7 @@ export default function TestimonialsSection() {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="w-[20px] h-[20px] sm:w-[22px] sm:h-[22px] lg:w-[24px] lg:h-[24px]"
                 >
                   <path
                     d="M9 18L15 12L9 6"
@@ -182,20 +184,20 @@ function TestimonialCard({ testimonial }: { testimonial: typeof testimonials[0] 
   return (
     <div className="flex flex-col h-full">
       {/* Speech Bubble */}
-      <div className="relative bg-transparent border-2 border-primary rounded-[45px] p-[40px] mb-[58px] flex-1 flex items-center">
-        <p className="text-[16px] lg:text-[18px] font-normal leading-[20px] lg:leading-[23px] text-white">
+      <div className="relative bg-transparent border-2 border-primary rounded-[30px] sm:rounded-[38px] lg:rounded-[45px] p-[30px] sm:p-[35px] lg:p-[40px] mb-[45px] sm:mb-[52px] lg:mb-[58px] flex-1 flex items-center">
+        <p className="text-[15px] sm:text-[16px] lg:text-[18px] font-normal leading-[19px] sm:leading-[20px] lg:leading-[23px] text-white">
           &ldquo;{testimonial.quote}&rdquo;
         </p>
         {/* Diamond pointer */}
-        <div className="absolute left-1/2 -translate-x-1/2 -bottom-[14px] w-[28px] h-[28px] bg-dark border-2 border-primary rotate-45" />
+        <div className="absolute left-1/2 -translate-x-1/2 -bottom-[12px] sm:bottom-[13px] lg:-bottom-[14px] w-[24px] h-[24px] sm:w-[26px] sm:h-[26px] lg:w-[28px] lg:h-[28px] bg-dark border-2 border-primary rotate-45" />
       </div>
 
       {/* Author Info */}
-      <div className="text-center px-[20px]">
-        <h4 className="text-[18px] lg:text-[20px] font-medium leading-[23px] lg:leading-[25px] text-primary mb-[4px]">
+      <div className="text-center px-[15px] sm:px-[18px] lg:px-[20px]">
+        <h4 className="text-[17px] sm:text-[19px] lg:text-[20px] font-medium leading-[21px] sm:leading-[23px] lg:leading-[25px] text-primary mb-[4px]">
           {testimonial.name}
         </h4>
-        <p className="text-[16px] lg:text-[18px] font-normal leading-[20px] lg:leading-[23px] text-white">
+        <p className="text-[15px] sm:text-[16px] lg:text-[18px] font-normal leading-[19px] sm:leading-[20px] lg:leading-[23px] text-white">
           {testimonial.position}
         </p>
       </div>
