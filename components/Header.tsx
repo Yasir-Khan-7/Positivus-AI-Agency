@@ -10,7 +10,7 @@ export default function Header() {
     e.preventDefault();
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 100; // Offset for fixed header
+      const headerOffset = 80; // Offset for fixed header
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     <header className="w-full bg-white sticky top-0 z-50 shadow-sm">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] py-[30px] sm:py-[40px] lg:py-[60px]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] py-[15px] sm:py-[20px] lg:py-[25px]">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">

@@ -19,7 +19,7 @@ const caseStudies = [
 
 export default function CaseStudiesSection() {
   return (
-    <section id="use-cases" className="w-full bg-white scroll-mt-32">
+    <section id="use-cases" className="w-full bg-white scroll-mt-20">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-8 lg:px-[100px] py-[40px] sm:py-[55px] lg:py-[70px]">
         {/* Section Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-[20px] sm:gap-[30px] lg:gap-[40px] mb-[40px] sm:mb-[60px] lg:mb-[80px]">
